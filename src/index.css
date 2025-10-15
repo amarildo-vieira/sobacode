@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-green: #00ff00;
+  --color-dark-green: #006400;
+  --color-light-green: #90ee90;
+  --color-black: #000000;
+  --color-dark-gray: #1a1a1a;
+  --color-white: #ffffff;
+  --color-gray: #333333;
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-8 py-3 bg-primary-green text-black font-bold rounded-lg transition-all duration-300 hover:bg-light-green hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-primary-green text-primary-green hover:bg-primary-green hover:text-black;
+  }
+
+  .section {
+    @apply py-20;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl text-center text-primary-green mb-12 font-bold;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
